@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1F90D84317FDD9F26C4A7E2 /* Pods_PodTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A558C5F09E84B1D615B0496A /* Pods_PodTester.framework */; };
 		B661C5BE295657FC006BD906 /* PodTesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5BD295657FC006BD906 /* PodTesterApp.swift */; };
 		B661C5C0295657FC006BD906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5BF295657FC006BD906 /* ContentView.swift */; };
 		B661C5C2295657FE006BD906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B661C5C1295657FE006BD906 /* Assets.xcassets */; };
 		B661C5C5295657FE006BD906 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B661C5C4295657FE006BD906 /* Preview Assets.xcassets */; };
+		B661C5CE29565C05006BD906 /* InnovationEngineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */; };
+		B6F663162958D590004A1F70 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F663152958D590004A1F70 /* ExperimentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		168F7E9FEF3F387AAA5CF7C0 /* Pods-PodTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodTester.release.xcconfig"; path = "Target Support Files/Pods-PodTester/Pods-PodTester.release.xcconfig"; sourceTree = "<group>"; };
+		A558C5F09E84B1D615B0496A /* Pods_PodTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC84F99FF6F59A4637E59485 /* Pods-PodTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodTester.debug.xcconfig"; path = "Target Support Files/Pods-PodTester/Pods-PodTester.debug.xcconfig"; sourceTree = "<group>"; };
 		B661C5BA295657FC006BD906 /* PodTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B661C5BD295657FC006BD906 /* PodTesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodTesterApp.swift; sourceTree = "<group>"; };
 		B661C5BF295657FC006BD906 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B661C5C1295657FE006BD906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B661C5C4295657FE006BD906 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnovationEngineViewModel.swift; sourceTree = "<group>"; };
+		B6F663152958D590004A1F70 /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
+		B6F663182958F8FD004A1F70 /* InnovationEngineConfig-Example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "InnovationEngineConfig-Example.xcconfig"; sourceTree = "<group>"; };
+		B6F663192958F98A004A1F70 /* InnovationEngineConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = InnovationEngineConfig.xcconfig; sourceTree = "<group>"; };
+		B6F6631C2958FC05004A1F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +37,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F90D84317FDD9F26C4A7E2 /* Pods_PodTester.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AF9097410272D5C8D0EFEE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A558C5F09E84B1D615B0496A /* Pods_PodTester.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46069A238D6CC4BEFFFC5A6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC84F99FF6F59A4637E59485 /* Pods-PodTester.debug.xcconfig */,
+				168F7E9FEF3F387AAA5CF7C0 /* Pods-PodTester.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B661C5B1295657FC006BD906 = {
 			isa = PBXGroup;
 			children = (
+				B6F663192958F98A004A1F70 /* InnovationEngineConfig.xcconfig */,
+				B6F663182958F8FD004A1F70 /* InnovationEngineConfig-Example.xcconfig */,
 				B661C5BC295657FC006BD906 /* PodTester */,
 				B661C5BB295657FC006BD906 /* Products */,
+				46069A238D6CC4BEFFFC5A6C /* Pods */,
+				2AF9097410272D5C8D0EFEE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +84,13 @@
 		B661C5BC295657FC006BD906 /* PodTester */ = {
 			isa = PBXGroup;
 			children = (
+				B6F6631C2958FC05004A1F70 /* Info.plist */,
 				B661C5BD295657FC006BD906 /* PodTesterApp.swift */,
 				B661C5BF295657FC006BD906 /* ContentView.swift */,
+				B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */,
 				B661C5C1295657FE006BD906 /* Assets.xcassets */,
 				B661C5C3295657FE006BD906 /* Preview Content */,
+				B6F663152958D590004A1F70 /* ExperimentView.swift */,
 			);
 			path = PodTester;
 			sourceTree = "<group>";
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B661C5C8295657FE006BD906 /* Build configuration list for PBXNativeTarget "PodTester" */;
 			buildPhases = (
+				AC93E88E85459090D8C21DF1 /* [CP] Check Pods Manifest.lock */,
 				B661C5B6295657FC006BD906 /* Sources */,
 				B661C5B7295657FC006BD906 /* Frameworks */,
 				B661C5B8295657FC006BD906 /* Resources */,
+				C280F17CAB0817EF1A7434CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +170,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AC93E88E85459090D8C21DF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PodTester-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C280F17CAB0817EF1A7434CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodTester/Pods-PodTester-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodTester/Pods-PodTester-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodTester/Pods-PodTester-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B661C5B6295657FC006BD906 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +219,8 @@
 			files = (
 				B661C5C0295657FC006BD906 /* ContentView.swift in Sources */,
 				B661C5BE295657FC006BD906 /* PodTesterApp.swift in Sources */,
+				B661C5CE29565C05006BD906 /* InnovationEngineViewModel.swift in Sources */,
+				B6F663162958D590004A1F70 /* ExperimentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +229,7 @@
 /* Begin XCBuildConfiguration section */
 		B661C5C6295657FE006BD906 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6F663192958F98A004A1F70 /* InnovationEngineConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -207,6 +290,7 @@
 		};
 		B661C5C7295657FE006BD906 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6F663192958F98A004A1F70 /* InnovationEngineConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -261,6 +345,7 @@
 		};
 		B661C5C9295657FE006BD906 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC84F99FF6F59A4637E59485 /* Pods-PodTester.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -270,6 +355,7 @@
 				DEVELOPMENT_TEAM = BQVTDB32X9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PodTester/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,6 +376,7 @@
 		};
 		B661C5CA295657FE006BD906 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168F7E9FEF3F387AAA5CF7C0 /* Pods-PodTester.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +386,7 @@
 				DEVELOPMENT_TEAM = BQVTDB32X9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PodTester/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

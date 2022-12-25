@@ -1,0 +1,21 @@
+PODS:
+  - InnovationEngineService (1.1.0)
+
+DEPENDENCIES:
+  - InnovationEngineService (from `https://github.com/innovation-club-net/InnovationEngineServicePod.git`)
+
+EXTERNAL SOURCES:
+  InnovationEngineService:
+    :git: https://github.com/innovation-club-net/InnovationEngineServicePod.git
+
+CHECKOUT OPTIONS:
+  InnovationEngineService:
+    :commit: a9e77c59e8c5406d301aa3f3c2e3e24c06e4690c
+    :git: https://github.com/innovation-club-net/InnovationEngineServicePod.git
+
+SPEC CHECKSUMS:
+  InnovationEngineService: ea9b7046b7c4eecebad548037ef98dc2ace6d115
+
+PODFILE CHECKSUM: 8d41777dae2274e80b5be5176a59040500a032ce
+
+COCOAPODS: 1.11.3
