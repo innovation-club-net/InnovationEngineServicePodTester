@@ -14,11 +14,7 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
         
     var innovationEngine: InnovationEngine
     
-    
-    var loaderServer: String? {
-        innovationEngine.configLoaderServer
-    }
-    
+
     override init() {
         innovationEngine = InnovationEngine.shared
         
@@ -33,42 +29,18 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
     }
     
     
+    ///
+    ///
     func configureClientId(_ clientId: String) {
         innovationEngine.configClientId = clientId
     }
     
-    func configureEnvironment(_ environment: String) {
-        innovationEngine.configEnvironment = environment
-    }
     
-    func configureTimeout(_ timeout: String) {
-        innovationEngine.configTimeout = Int(timeout) ?? 500
-    }
-    
-    
+    ///
+    ///
     func getExperiments(completion: @escaping (Result<[Experiment?], Error>) -> Void) {
         innovationEngine.getExperiments(screenIds: [screenId]) { result in
             completion(result)
-            /*
-            switch result {
-            case .failure(let error):
-                // handle the error
-                print("\(error)")
-
-            case .success(let experiments):
-                // This example only considers the first entry of the array of Experiments
-                guard let experiment = experiments[0] else {
-                    print("No experiment returned")
-//                    DispatchQueue.main.async {
-//                        self.viewModel.setError("No experiment returned")
-//                    }
-                    return
-                }
-                // start the experiment
-                print("experiments[0] \(experiment)")
-//                self.startExperiment(experiment)
-            }
-             */
         }
     }
     

@@ -52,9 +52,10 @@ struct ContentView: View {
                     .padding()
                 }
                 .task {
-                    loaderServer = viewModel.loaderServer ?? ""
-                    timeout = String(describing: viewModel.innovationEngine.configTimeout)
+                    // initialisation values the Innovation Engine
+                    loaderServer = viewModel.innovationEngine.configLoaderServer ?? ""
                     environment = viewModel.innovationEngine.configEnvironment ?? ""
+                    timeout = String(describing: viewModel.innovationEngine.configTimeout)
 
                     // varies with each screen/view of the app
                     viewModel.screenId = "dashboard"
@@ -64,7 +65,7 @@ struct ContentView: View {
                 }
             }
             
-            // Cover the config screen with the experiment's WebView
+            // Using the ZStack, cover the config screen with the experiment's WebView
             if let experimentView = experimentView {
                 experimentView
             }
@@ -73,10 +74,21 @@ struct ContentView: View {
 
     }
     
+    
+    ///
+    ///
     func getExperiment(scrollViewProxy: ScrollViewProxy) {
         resultDescription = ""
+        
+        // Generate new clientId to simulate a request for a different user
+        // Setting the configClientId property of the Innovation Engine is typically
+        // only performed once as soon as some ID of the user us available
         clientId = String(Int(Date().timeIntervalSince1970 * 1000))
         viewModel.configureClientId(clientId)
+        
+        // Call the Innovation Engine to receive an Experiment for the given
+        // - environment
+        // - screen ID
         viewModel.getExperiments() { getExperimentsResult in
             switch getExperimentsResult {
             case .failure(let error):
@@ -86,7 +98,7 @@ struct ContentView: View {
                 scrollViewProxy.scrollTo(bottomID)
 
             case .success(let experiments):
-                // This example only considers the first entry of the array of Experiments
+                // This example app only considers the first entry of the array of Experiments
                 guard let experiment = experiments[0] else {
                     print("No experiment returned")
                     resultDescription = "No experiment returned"
@@ -95,16 +107,16 @@ struct ContentView: View {
                 }
                 print("experiments[0] \(experiment)")
 
-                // start the experiment in a view
+                // Start the experiment in a view
                 experimentView = ExperimentView(experiment: experiment) { startExperimentResult in
                     switch startExperimentResult {
                     case .failure(let error):
-                        // handle the error
+                        // Handle the error
                         resultDescription = "\(error.localizedDescription)"
                         scrollViewProxy.scrollTo(bottomID)
 
                     case .success(let event):
-                        // handle the event
+                        // Handle the event
                         print(event.experimentId!)
                         print(event.treatmentUuid!)
                         print(event.interaction!)

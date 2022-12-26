@@ -32,7 +32,7 @@ struct CompactFormItemView: View {
             }
             if let footer = footer {
                 Text(footer)
-                    .font(.subheadline)
+                    .font(.footnote)
                     .italic()
                     .foregroundColor(.secondary)
             }
