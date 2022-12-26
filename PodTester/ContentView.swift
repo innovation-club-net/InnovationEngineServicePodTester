@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var viewModel = InnovationEngineViewModel()
+    @State var loaderServer: String = ""
     @State var environment: String = ""
     @State var timeout: String = ""
     @State var clientId: String = String(Int(Date().timeIntervalSince1970 * 1000))
@@ -23,47 +24,12 @@ struct ContentView: View {
             ScrollViewReader { scrollViewProxy in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("configLoaderServer")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            Text(viewModel.loaderServer ?? "")
-                                .padding(5)
-                        }
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("configTimeout")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            Text(timeout)
-                                .padding(5)
-                        }
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("configEnvironment")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            Text(environment)
-                                .padding(5)
-                        }
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Screen ID passed to getExperiments()")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            TextField("ScreenId", text: $viewModel.screenId)
-                                .padding(10)
-                                .background(.background)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("configClientId (*)")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            Text(clientId)
-                                .padding(5)
-                            Text("(*) newly generated on each request for testing purposes")
-                                .font(.subheadline)
-                                .italic()
-                                .foregroundColor(.secondary)
-                        }
+                        CompactFormItemView(header: "configLoaderServer", text: $loaderServer)
+                        CompactFormItemView(header: "configTimeout", text: $timeout)
+                        CompactFormItemView(header: "configEnvironment", text: $environment)
+                        CompactFormItemView(header: "Screen ID passed to getExperiments()", text: $viewModel.screenId, isEditable: true)
+                        CompactFormItemView(header: "configClientId (*)", text: $clientId, footer: "(*) newly generated on each request for testing purposes")
+
                         Button("GetExperiment") {
                             getExperiment(scrollViewProxy: scrollViewProxy)
                         }
@@ -86,6 +52,7 @@ struct ContentView: View {
                     .padding()
                 }
                 .task {
+                    loaderServer = viewModel.loaderServer ?? ""
                     timeout = String(describing: viewModel.innovationEngine.configTimeout)
                     environment = viewModel.innovationEngine.configEnvironment ?? ""
 
