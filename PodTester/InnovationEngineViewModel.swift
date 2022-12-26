@@ -12,7 +12,7 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
     
     @Published var screenId: String = ""
         
-    private var innovationEngine: InnovationEngine
+    var innovationEngine: InnovationEngine
     
     
     var loaderServer: String? {
@@ -24,6 +24,12 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
         
         let loaderServer = Bundle.main.object(forInfoDictionaryKey: "NVTNCLB_LOADER_SERVER") as? String ?? ""
         innovationEngine.configLoaderServer = !loaderServer.isEmpty ? loaderServer : "https://your-instance.innovation-club.net"
+        
+        let environment = Bundle.main.object(forInfoDictionaryKey: "NVTNCLB_ENVIRONMENT") as? String ?? ""
+        innovationEngine.configEnvironment = !environment.isEmpty ? environment : "dev"
+        
+        let timeout = Bundle.main.object(forInfoDictionaryKey: "NVTNCLB_TIMEOUT") as? String ?? ""
+        innovationEngine.configTimeout = !timeout.isEmpty ? Int(timeout) ?? 500 : 500
     }
     
     
@@ -65,4 +71,21 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
              */
         }
     }
+    
+    
+    ///
+    ///
+    static func getMessageForError(_ error: Error) -> String {
+        switch error as? RequestError {
+        case .error(let error):
+            return error.localizedDescription
+        case .parsing:
+            return "InnovationEngine parsing failed"
+        case .webPageEmpty:
+            return "InnovationEngine web page is empty"
+        case .none:
+            fatalError("InnovationEngine request failed \n error in wrong format")
+        }
+    }
+
 }
