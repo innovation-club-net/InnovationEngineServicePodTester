@@ -29,6 +29,8 @@
 		B61071CA295AE9320030CD98 /* Mulish-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.woff"; sourceTree = "<group>"; };
 		B61071CB295AE9320030CD98 /* Mulish-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic.woff"; sourceTree = "<group>"; };
 		B61071CF295AF08C0030CD98 /* segoepr.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoepr.woff; sourceTree = "<group>"; };
+		B61071D5295B2C1F0030CD98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B61071D6295B2C3B0030CD98 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B661C5BA295657FC006BD906 /* PodTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B661C5BD295657FC006BD906 /* PodTesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodTesterApp.swift; sourceTree = "<group>"; };
 		B661C5BF295657FC006BD906 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		B661C5B1295657FC006BD906 = {
 			isa = PBXGroup;
 			children = (
+				B61071D6295B2C3B0030CD98 /* LICENSE */,
+				B61071D5295B2C1F0030CD98 /* README.md */,
 				B6F663192958F98A004A1F70 /* InnovationEngineConfig.xcconfig */,
 				B6F663182958F8FD004A1F70 /* InnovationEngineConfig-Example.xcconfig */,
 				B661C5BC295657FC006BD906 /* PodTester */,
