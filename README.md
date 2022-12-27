@@ -11,7 +11,7 @@ Xcode 14, iOS 13
 To run this sample project
 
 1. clone the repo
-2. go to the Example directory
+2. cd to the `InnovationEngineServicePodTester` directory
 3. run `pod install`
 4. copy the file `InnovationEngineConfig-Example.xcconfig` into `InnovationEngineConfig.xcconfig`
 5. edit the `InnovationEngineConfig.xcconfig` file and update the configuration according to the instructions of FehrAdvice
