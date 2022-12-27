@@ -51,24 +51,6 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-                .task {
-                    // initialisation values the Innovation Engine
-                    loaderServer = viewModel.innovationEngine.configLoaderServer ?? ""
-                    environment = viewModel.innovationEngine.configEnvironment ?? ""
-                    timeout = String(describing: viewModel.innovationEngine.configTimeout)
-
-                    // varies with each screen/view of the app
-                    viewModel.screenId = "dashboard"
-                    
-                    // perform a first initial request
-//                    getExperiment(scrollViewProxy: scrollViewProxy)
-                    
-                    
-//                    for family in UIFont.familyNames.sorted() {
-//                        let names = UIFont.fontNames(forFamilyName: family)
-//                        print("Family: \(family) Font names: \(names)")
-//                    }
-                }
             }
             
             // Using the ZStack, cover the config screen with the experiment's WebView
@@ -78,6 +60,19 @@ struct ContentView: View {
         }
         .background(Color(UIColor.secondarySystemBackground))
         .font(.custom("Mulish-Regular", size: 17))
+        .task {
+            // initialisation values the Innovation Engine
+            loaderServer = viewModel.innovationEngine.configLoaderServer ?? ""
+            environment = viewModel.innovationEngine.configEnvironment ?? ""
+            timeout = String(describing: viewModel.innovationEngine.configTimeout)
+
+            // varies with each screen/view of the app
+            viewModel.screenId = "dashboard"
+            
+            // perform a first initial request
+//                    getExperiment(scrollViewProxy: scrollViewProxy)
+            
+            }
     }
     
     

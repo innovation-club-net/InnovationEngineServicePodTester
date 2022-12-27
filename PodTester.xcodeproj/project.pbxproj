@@ -10,6 +10,7 @@
 		B1F90D84317FDD9F26C4A7E2 /* Pods_PodTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A558C5F09E84B1D615B0496A /* Pods_PodTester.framework */; };
 		B61071CC295AE9330030CD98 /* Mulish-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = B61071CA295AE9320030CD98 /* Mulish-Regular.woff */; };
 		B61071CD295AE9330030CD98 /* Mulish-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = B61071CB295AE9320030CD98 /* Mulish-Italic.woff */; };
+		B61071D0295AF08D0030CD98 /* segoepr.woff in Resources */ = {isa = PBXBuildFile; fileRef = B61071CF295AF08C0030CD98 /* segoepr.woff */; };
 		B661C5BE295657FC006BD906 /* PodTesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5BD295657FC006BD906 /* PodTesterApp.swift */; };
 		B661C5C0295657FC006BD906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5BF295657FC006BD906 /* ContentView.swift */; };
 		B661C5C2295657FE006BD906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B661C5C1295657FE006BD906 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		AC84F99FF6F59A4637E59485 /* Pods-PodTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodTester.debug.xcconfig"; path = "Target Support Files/Pods-PodTester/Pods-PodTester.debug.xcconfig"; sourceTree = "<group>"; };
 		B61071CA295AE9320030CD98 /* Mulish-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.woff"; sourceTree = "<group>"; };
 		B61071CB295AE9320030CD98 /* Mulish-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic.woff"; sourceTree = "<group>"; };
+		B61071CF295AF08C0030CD98 /* segoepr.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoepr.woff; sourceTree = "<group>"; };
 		B661C5BA295657FC006BD906 /* PodTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B661C5BD295657FC006BD906 /* PodTesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodTesterApp.swift; sourceTree = "<group>"; };
 		B661C5BF295657FC006BD906 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,25 @@
 				168F7E9FEF3F387AAA5CF7C0 /* Pods-PodTester.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B61071D1295AF2D30030CD98 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B668AE57295A65A100CE5422 /* Mulish-Italic.ttf */,
+				B668AE55295A5BE900CE5422 /* Mulish-Regular.ttf */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B61071D2295AF2DE0030CD98 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B61071CF295AF08C0030CD98 /* segoepr.woff */,
+				B61071CB295AE9320030CD98 /* Mulish-Italic.woff */,
+				B61071CA295AE9320030CD98 /* Mulish-Regular.woff */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		B661C5B1295657FC006BD906 = {
@@ -118,10 +139,8 @@
 		B668AE4D2959D21100CE5422 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				B61071CB295AE9320030CD98 /* Mulish-Italic.woff */,
-				B61071CA295AE9320030CD98 /* Mulish-Regular.woff */,
-				B668AE57295A65A100CE5422 /* Mulish-Italic.ttf */,
-				B668AE55295A5BE900CE5422 /* Mulish-Regular.ttf */,
+				B61071D1295AF2D30030CD98 /* App */,
+				B61071D2295AF2DE0030CD98 /* WebView */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -188,6 +207,7 @@
 			files = (
 				B661C5C5295657FE006BD906 /* Preview Assets.xcassets in Resources */,
 				B61071CD295AE9330030CD98 /* Mulish-Italic.woff in Resources */,
+				B61071D0295AF08D0030CD98 /* segoepr.woff in Resources */,
 				B661C5C2295657FE006BD906 /* Assets.xcassets in Resources */,
 				B668AE58295A65A100CE5422 /* Mulish-Italic.ttf in Resources */,
 				B668AE56295A5BE900CE5422 /* Mulish-Regular.ttf in Resources */,
