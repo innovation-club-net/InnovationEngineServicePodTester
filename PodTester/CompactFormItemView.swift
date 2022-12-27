@@ -18,7 +18,7 @@ struct CompactFormItemView: View {
         VStack(alignment: .leading, spacing: 5) {
             if let header = header {
                 Text(header)
-                    .font(.subheadline)
+                    .font(.custom("Mulish-Regular", size: 15, relativeTo: .subheadline))
                     .foregroundColor(.secondary)
             }
             if isEditable {
@@ -28,12 +28,11 @@ struct CompactFormItemView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             } else {
                 Text(text)
-                    .padding(5)
+                    .padding(.horizontal, 10)
             }
             if let footer = footer {
                 Text(footer)
-                    .font(.footnote)
-                    .italic()
+                    .font(.custom("Mulish-Italic", size: 13, relativeTo: .footnote))
                     .foregroundColor(.secondary)
             }
         }

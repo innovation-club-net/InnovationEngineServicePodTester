@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B1F90D84317FDD9F26C4A7E2 /* Pods_PodTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A558C5F09E84B1D615B0496A /* Pods_PodTester.framework */; };
+		B61071CC295AE9330030CD98 /* Mulish-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = B61071CA295AE9320030CD98 /* Mulish-Regular.woff */; };
+		B61071CD295AE9330030CD98 /* Mulish-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = B61071CB295AE9320030CD98 /* Mulish-Italic.woff */; };
 		B661C5BE295657FC006BD906 /* PodTesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5BD295657FC006BD906 /* PodTesterApp.swift */; };
 		B661C5C0295657FC006BD906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5BF295657FC006BD906 /* ContentView.swift */; };
 		B661C5C2295657FE006BD906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B661C5C1295657FE006BD906 /* Assets.xcassets */; };
 		B661C5C5295657FE006BD906 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B661C5C4295657FE006BD906 /* Preview Assets.xcassets */; };
 		B661C5CE29565C05006BD906 /* InnovationEngineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */; };
 		B668AE4C29599ABF00CE5422 /* CompactFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668AE4B29599ABF00CE5422 /* CompactFormItemView.swift */; };
+		B668AE56295A5BE900CE5422 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B668AE55295A5BE900CE5422 /* Mulish-Regular.ttf */; };
+		B668AE58295A65A100CE5422 /* Mulish-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B668AE57295A65A100CE5422 /* Mulish-Italic.ttf */; };
 		B6F663162958D590004A1F70 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F663152958D590004A1F70 /* ExperimentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +25,8 @@
 		168F7E9FEF3F387AAA5CF7C0 /* Pods-PodTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodTester.release.xcconfig"; path = "Target Support Files/Pods-PodTester/Pods-PodTester.release.xcconfig"; sourceTree = "<group>"; };
 		A558C5F09E84B1D615B0496A /* Pods_PodTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC84F99FF6F59A4637E59485 /* Pods-PodTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodTester.debug.xcconfig"; path = "Target Support Files/Pods-PodTester/Pods-PodTester.debug.xcconfig"; sourceTree = "<group>"; };
+		B61071CA295AE9320030CD98 /* Mulish-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.woff"; sourceTree = "<group>"; };
+		B61071CB295AE9320030CD98 /* Mulish-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic.woff"; sourceTree = "<group>"; };
 		B661C5BA295657FC006BD906 /* PodTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B661C5BD295657FC006BD906 /* PodTesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodTesterApp.swift; sourceTree = "<group>"; };
 		B661C5BF295657FC006BD906 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +34,8 @@
 		B661C5C4295657FE006BD906 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnovationEngineViewModel.swift; sourceTree = "<group>"; };
 		B668AE4B29599ABF00CE5422 /* CompactFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactFormItemView.swift; sourceTree = "<group>"; };
+		B668AE55295A5BE900CE5422 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		B668AE57295A65A100CE5422 /* Mulish-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic.ttf"; sourceTree = "<group>"; };
 		B6F663152958D590004A1F70 /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
 		B6F663182958F8FD004A1F70 /* InnovationEngineConfig-Example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "InnovationEngineConfig-Example.xcconfig"; sourceTree = "<group>"; };
 		B6F663192958F98A004A1F70 /* InnovationEngineConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = InnovationEngineConfig.xcconfig; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 		B661C5BC295657FC006BD906 /* PodTester */ = {
 			isa = PBXGroup;
 			children = (
+				B668AE4D2959D21100CE5422 /* Fonts */,
 				B6F6631C2958FC05004A1F70 /* Info.plist */,
 				B661C5BD295657FC006BD906 /* PodTesterApp.swift */,
 				B661C5BF295657FC006BD906 /* ContentView.swift */,
@@ -104,6 +113,17 @@
 				B661C5C4295657FE006BD906 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B668AE4D2959D21100CE5422 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B61071CB295AE9320030CD98 /* Mulish-Italic.woff */,
+				B61071CA295AE9320030CD98 /* Mulish-Regular.woff */,
+				B668AE57295A65A100CE5422 /* Mulish-Italic.ttf */,
+				B668AE55295A5BE900CE5422 /* Mulish-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B661C5C5295657FE006BD906 /* Preview Assets.xcassets in Resources */,
+				B61071CD295AE9330030CD98 /* Mulish-Italic.woff in Resources */,
 				B661C5C2295657FE006BD906 /* Assets.xcassets in Resources */,
+				B668AE58295A65A100CE5422 /* Mulish-Italic.ttf in Resources */,
+				B668AE56295A5BE900CE5422 /* Mulish-Regular.ttf in Resources */,
+				B61071CC295AE9330030CD98 /* Mulish-Regular.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,5 +8,10 @@
 	<string>$(NVTNCLB_LOADER_SERVER)</string>
 	<key>NVTNCLB_TIMEOUT</key>
 	<string>$(NVTNCLB_TIMEOUT)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mulish-Regular.ttf</string>
+		<string>Mulish-Italic.ttf</string>
+	</array>
 </dict>
 </plist>

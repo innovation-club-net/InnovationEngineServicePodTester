@@ -40,7 +40,7 @@ struct ContentView: View {
                         
                         VStack(alignment: .leading, spacing: 5) {
                             Text("Result")
-                                .font(.subheadline)
+                                .font(.custom("Mulish-Regular", size: 15, relativeTo: .subheadline))
                                 .foregroundColor(.secondary)
                             Text(resultDescription)
                                 .padding(5)
@@ -61,7 +61,13 @@ struct ContentView: View {
                     viewModel.screenId = "dashboard"
                     
                     // perform a first initial request
-                    getExperiment(scrollViewProxy: scrollViewProxy)
+//                    getExperiment(scrollViewProxy: scrollViewProxy)
+                    
+                    
+//                    for family in UIFont.familyNames.sorted() {
+//                        let names = UIFont.fontNames(forFamilyName: family)
+//                        print("Family: \(family) Font names: \(names)")
+//                    }
                 }
             }
             
@@ -71,7 +77,7 @@ struct ContentView: View {
             }
         }
         .background(Color(UIColor.secondarySystemBackground))
-
+        .font(.custom("Mulish-Regular", size: 17))
     }
     
     
