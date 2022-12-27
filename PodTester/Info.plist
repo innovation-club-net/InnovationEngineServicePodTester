@@ -8,6 +8,8 @@
 	<string>$(NVTNCLB_LOADER_SERVER)</string>
 	<key>NVTNCLB_TIMEOUT</key>
 	<string>$(NVTNCLB_TIMEOUT)</string>
+	<key>SAMPLE_SCREEN_ID</key>
+	<string>$(SAMPLE_SCREEN_ID)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Mulish-Regular.ttf</string>

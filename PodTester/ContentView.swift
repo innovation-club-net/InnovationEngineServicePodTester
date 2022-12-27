@@ -43,13 +43,25 @@ struct ContentView: View {
                                 .font(.custom("Mulish-Regular", size: 15, relativeTo: .subheadline))
                                 .foregroundColor(.secondary)
                             Text(resultDescription)
-                                .padding(5)
                                 .frame(maxWidth: .infinity, alignment: .center)
                         }
                         .id(bottomID)
                         Spacer()
                     }
                     .padding()
+                }
+                .task {
+                    // initialisation values the Innovation Engine
+                    loaderServer = viewModel.innovationEngine.configLoaderServer ?? ""
+                    environment = viewModel.innovationEngine.configEnvironment ?? ""
+                    timeout = String(describing: viewModel.innovationEngine.configTimeout)
+
+                    // Each call to getExperiments expects at least one screen ID
+                    let sampleScreenId = Bundle.main.object(forInfoDictionaryKey: "SAMPLE_SCREEN_ID") as? String ?? ""
+                    viewModel.screenId = !sampleScreenId.isEmpty ? sampleScreenId : "demo"
+                    
+                    // perform a first initial request
+                    getExperiment(scrollViewProxy: scrollViewProxy)
                 }
             }
             
@@ -60,19 +72,6 @@ struct ContentView: View {
         }
         .background(Color(UIColor.secondarySystemBackground))
         .font(.custom("Mulish-Regular", size: 17))
-        .task {
-            // initialisation values the Innovation Engine
-            loaderServer = viewModel.innovationEngine.configLoaderServer ?? ""
-            environment = viewModel.innovationEngine.configEnvironment ?? ""
-            timeout = String(describing: viewModel.innovationEngine.configTimeout)
-
-            // varies with each screen/view of the app
-            viewModel.screenId = "dashboard"
-            
-            // perform a first initial request
-//                    getExperiment(scrollViewProxy: scrollViewProxy)
-            
-            }
     }
     
     
