@@ -70,9 +70,30 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
     ///
     ///
     func getExperiments(completion: @escaping (Result<[Experiment?], Error>) -> Void) {
+        
+        // multi screenId call
         innovationEngine.getExperiments(screenIds: [screenId]) { result in
             completion(result)
         }
+        
+        // single screenId call
+//        innovationEngine.getExperiment(screenId: screenId) { result in
+//            print(result)
+//            switch result {
+//            case .success(let experiment):
+//                print("experiment \(experiment)")
+//            case .failure(let error):
+//                print("error: \(error)")
+//            }
+//            completion(Result(catching: {
+//                switch result {
+//                case .success(let experiment):
+//                    return [experiment]
+//                case .failure(let error):
+//                    throw error
+//                }
+//            }))
+//        }
     }
     
     

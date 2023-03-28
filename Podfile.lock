@@ -1,16 +1,16 @@
 PODS:
-  - InnovationEngineService (1.2.0)
+  - InnovationEngineService (2.0.0)
 
 DEPENDENCIES:
-  - InnovationEngineService (~> 1.2.0)
+  - InnovationEngineService (~> 2.0.0)
 
 SPEC REPOS:
   trunk:
     - InnovationEngineService
 
 SPEC CHECKSUMS:
-  InnovationEngineService: 5f9e5399a811089be5fe457c32a847dc0f06c1eb
+  InnovationEngineService: 36f1ff8ebc40b5064bee02d6b9629d4cdf4931cc
 
-PODFILE CHECKSUM: 7139f4d83bd96f51c7c01881b48d4652b298cbc1
+PODFILE CHECKSUM: ee24f0605c647c80b3d921a0a44639e427f6eca7
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

@@ -2,5 +2,5 @@ platform :ios, '13.0'
 
 target 'PodTester' do
   use_frameworks!
-  pod 'InnovationEngineService', '~> 1.2.0'
+  pod 'InnovationEngineService', '~> 2.0.0'
 end

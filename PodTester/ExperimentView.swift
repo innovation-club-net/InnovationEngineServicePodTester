@@ -25,12 +25,7 @@ class ExperimentViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        experiment.startWebView(on: self,
-                                with: [
-                                    // the web view will cover the full screen
-                                    "H:|-0-[w]-0-|",
-                                    "V:|-0-[w]-0-|"],
-                                completion: completion)
+        experiment.startWebView(inside: self.view, completion: completion)
     }
     
     
