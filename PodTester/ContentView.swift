@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var loaderServer: String = ""
     @State var environment: String = ""
     @State var timeout: String = ""
+    @State var clientIdField = ""
     @State var clientId: String = String(Int(Date().timeIntervalSince1970 * 1000))
     @State var resultDescription: String = ""
     @State var experimentView: ExperimentView?
@@ -24,12 +25,13 @@ struct ContentView: View {
             ScrollViewReader { scrollViewProxy in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
-                        CompactFormItemView(header: "configLoaderServer", text: $loaderServer)
-                        CompactFormItemView(header: "configTimeout", text: $timeout)
-                        CompactFormItemView(header: "configEnvironment", text: $environment)
-                        CompactFormItemView(header: "Screen ID passed to getExperiments()", text: $viewModel.screenId, isEditable: true)
-                        CompactFormItemView(header: "configClientId (*)", text: $clientId, footer: "(*) newly generated on each request for testing purposes")
-
+                        CompactFormFieldView(header: "configLoaderServer", text: $loaderServer)
+                        CompactFormFieldView(header: "configTimeout", text: $timeout)
+                        CompactFormFieldView(header: "configEnvironment", text: $environment)
+                        CompactFormFieldView(header: "Screen ID passed to getExperiments()", text: $viewModel.screenId, isEditable: true)
+                        CompactFormFieldView(header: "configClientId (*)", text: $clientIdField, isEditable: true, footer: "(*) randomly generated if empty")
+                        Text(clientId)
+                        
                         Button("GetExperiment") {
                             getExperiment(scrollViewProxy: scrollViewProxy)
                         }
@@ -61,7 +63,7 @@ struct ContentView: View {
                     viewModel.screenId = !sampleScreenId.isEmpty ? sampleScreenId : "demo"
                     
                     // perform a first initial request
-                    getExperiment(scrollViewProxy: scrollViewProxy)
+                    // DISABLED: getExperiment(scrollViewProxy: scrollViewProxy)
                 }
             }
             
@@ -83,7 +85,11 @@ struct ContentView: View {
         // Generate new clientId to simulate a request for a different user
         // Setting the configClientId property of the Innovation Engine is typically
         // only performed once as soon as some ID of the user us available
-        clientId = String(Int(Date().timeIntervalSince1970 * 1000))
+        if clientIdField.isEmpty {
+            clientId = String(Int(Date().timeIntervalSince1970 * 1000))
+        } else {
+            clientId = clientIdField
+        }
         viewModel.configureClientId(clientId)
         
         // Call the Innovation Engine to receive an Experiment for the given
@@ -117,9 +123,7 @@ struct ContentView: View {
 
                     case .success(let event):
                         // Handle the event
-                        print(event.experimentId!)
-                        print(event.treatmentUuid!)
-                        print(event.interaction!)
+                        NSLog("ExperimentView returned success with event experimentId=\(event.experimentId) treatmentUuid=\(event.treatmentUuid) interaction=\(event.interaction)")
                         resultDescription = "\(event.interaction ?? "?")"
                         scrollViewProxy.scrollTo(bottomID)
                     }

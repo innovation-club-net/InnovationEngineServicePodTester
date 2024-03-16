@@ -20,3 +20,9 @@ NVTNCLB_TIMEOUT = 500
 
 // Example screen ID
 SAMPLE_SCREEN_ID = demo
+
+
+// (optional, only during development phase) forces a specific experiment to be returned.
+FORCE_EXPERIMENT_ID =
+// (optional, only during development phase) forces a specific treatment to be returned. ONLY in combination with FORCE_EXPERIMENT_ID
+FORCE_TREATMENT_UUID =

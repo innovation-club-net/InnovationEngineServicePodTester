@@ -8,14 +8,16 @@
 import Foundation
 import InnovationEngineService
 
-class InnovationEngineViewModel: NSObject, ObservableObject {
+class InnovationEngineViewModel: ObservableObject {
     
     @Published var screenId: String = ""
-        
+
     var innovationEngine: InnovationEngine
     
+    private var experimentId: String?
+    private var treatmentUuid: String?
 
-    override init() {
+    init() {
         innovationEngine = InnovationEngine.shared
         
         let loaderServer = Bundle.main.object(forInfoDictionaryKey: "NVTNCLB_LOADER_SERVER") as? String ?? ""
@@ -27,7 +29,9 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
         let timeout = Bundle.main.object(forInfoDictionaryKey: "NVTNCLB_TIMEOUT") as? String ?? ""
         innovationEngine.configTimeout = !timeout.isEmpty ? Int(timeout) ?? 500 : 500
         
-        super.init()
+        // optional experiment ID and treatment UUID (during development phase only)
+        experimentId = Bundle.main.object(forInfoDictionaryKey: "FORCE_EXPERIMENT_ID") as? String
+        treatmentUuid = Bundle.main.object(forInfoDictionaryKey: "FORCE_TREATMENT_UUID") as? String
         
         // Setup specific fonts to be used:
         
@@ -72,7 +76,7 @@ class InnovationEngineViewModel: NSObject, ObservableObject {
     func getExperiments(completion: @escaping (Result<[Experiment?], Error>) -> Void) {
         
         // multi screenId call
-        innovationEngine.getExperiments(screenIds: [screenId]) { result in
+        innovationEngine.getExperiments(screenIds: [screenId], experimentId: experimentId, treatmentUuid: treatmentUuid) { result in
             completion(result)
         }
         

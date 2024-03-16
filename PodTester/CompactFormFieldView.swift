@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CompactFormItemView: View {
+struct CompactFormFieldView: View {
     
-    var header: String
+    var header: String?
     @Binding var text: String
     var isEditable: Bool = false
     var footer: String?
@@ -22,7 +22,7 @@ struct CompactFormItemView: View {
                     .foregroundColor(.secondary)
             }
             if isEditable {
-                TextField(header, text: $text)
+                TextField(header ?? "", text: $text)
                     .padding(10)
                     .background(.background)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -44,6 +44,6 @@ struct CompactFormItemView_Previews: PreviewProvider {
     @State static var text = "Hello"
     
     static var previews: some View {
-        CompactFormItemView(header: "Text", text: $text)
+        CompactFormFieldView(header: "Text", text: $text)
     }
 }

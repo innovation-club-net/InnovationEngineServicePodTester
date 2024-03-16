@@ -10,6 +10,10 @@
 	<string>$(NVTNCLB_TIMEOUT)</string>
 	<key>SAMPLE_SCREEN_ID</key>
 	<string>$(SAMPLE_SCREEN_ID)</string>
+	<key>FORCE_EXPERIMENT_ID</key>
+	<string>$(FORCE_EXPERIMENT_ID)</string>
+	<key>FORCE_TREATMENT_UUID</key>
+	<string>$(FORCE_TREATMENT_UUID)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Mulish-Regular.ttf</string>

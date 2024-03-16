@@ -16,7 +16,7 @@
 		B661C5C2295657FE006BD906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B661C5C1295657FE006BD906 /* Assets.xcassets */; };
 		B661C5C5295657FE006BD906 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B661C5C4295657FE006BD906 /* Preview Assets.xcassets */; };
 		B661C5CE29565C05006BD906 /* InnovationEngineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */; };
-		B668AE4C29599ABF00CE5422 /* CompactFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668AE4B29599ABF00CE5422 /* CompactFormItemView.swift */; };
+		B668AE4C29599ABF00CE5422 /* CompactFormFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668AE4B29599ABF00CE5422 /* CompactFormFieldView.swift */; };
 		B668AE56295A5BE900CE5422 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B668AE55295A5BE900CE5422 /* Mulish-Regular.ttf */; };
 		B668AE58295A65A100CE5422 /* Mulish-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B668AE57295A65A100CE5422 /* Mulish-Italic.ttf */; };
 		B6F663162958D590004A1F70 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F663152958D590004A1F70 /* ExperimentView.swift */; };
@@ -37,7 +37,7 @@
 		B661C5C1295657FE006BD906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B661C5C4295657FE006BD906 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnovationEngineViewModel.swift; sourceTree = "<group>"; };
-		B668AE4B29599ABF00CE5422 /* CompactFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactFormItemView.swift; sourceTree = "<group>"; };
+		B668AE4B29599ABF00CE5422 /* CompactFormFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactFormFieldView.swift; sourceTree = "<group>"; };
 		B668AE55295A5BE900CE5422 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		B668AE57295A65A100CE5422 /* Mulish-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic.ttf"; sourceTree = "<group>"; };
 		B6F663152958D590004A1F70 /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 				B661C5BD295657FC006BD906 /* PodTesterApp.swift */,
 				B661C5BF295657FC006BD906 /* ContentView.swift */,
 				B661C5CD29565C05006BD906 /* InnovationEngineViewModel.swift */,
-				B668AE4B29599ABF00CE5422 /* CompactFormItemView.swift */,
+				B668AE4B29599ABF00CE5422 /* CompactFormFieldView.swift */,
 				B661C5C1295657FE006BD906 /* Assets.xcassets */,
 				B661C5C3295657FE006BD906 /* Preview Content */,
 				B6F663152958D590004A1F70 /* ExperimentView.swift */,
@@ -272,7 +272,7 @@
 				B661C5BE295657FC006BD906 /* PodTesterApp.swift in Sources */,
 				B661C5CE29565C05006BD906 /* InnovationEngineViewModel.swift in Sources */,
 				B6F663162958D590004A1F70 /* ExperimentView.swift in Sources */,
-				B668AE4C29599ABF00CE5422 /* CompactFormItemView.swift in Sources */,
+				B668AE4C29599ABF00CE5422 /* CompactFormFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
